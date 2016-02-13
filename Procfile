@@ -1,1 +1,1 @@
-web: python settings.py
+web:  scrapy crawl livingsocial
