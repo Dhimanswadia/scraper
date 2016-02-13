@@ -25,5 +25,5 @@ DATABASE = {
     'username':'juagqzmyvhljvz',  # fill in your username here
     'password':'H0GhC2nid4TcwYp1B76HMuQpFk',  # fill in your password here
     'database':'d14s66eejpvrag'
-}
+
 }
