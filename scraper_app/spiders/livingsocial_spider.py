@@ -9,7 +9,7 @@ save to a database (postgres).
 Scrapy spider part - it actually performs scraping.
 """
 
-from scrapy.spider import CrawlSpider
+from scrapy.spider import BaseSpider
 from scrapy.selector import HtmlXPathSelector
 from scrapy.contrib.loader import XPathItemLoader
 from scrapy.contrib.loader.processor import Join, MapCompose
@@ -17,7 +17,7 @@ from scrapy.contrib.loader.processor import Join, MapCompose
 from scraper_app.items import LivingSocialDeal
 
 
-class LivingSocialSpider(CrawlSpider):
+class LivingSocialSpider(BaseSpider):
     """
     Spider for regularly updated livingsocial.com site, San Francisco page
     """
