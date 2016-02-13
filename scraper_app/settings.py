@@ -15,7 +15,7 @@ ITEM_PIPELINES = ['scraper_app.pipelines.LivingSocialPipeline']
 #DATABASES['default'] = dj_database_url.config()
 
 DATABASE = {
-    'default': dj_database_url.config(),
+    'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname'),
     #'drivername': 'postgres',
   	'host':'ec2-54-225-223-40.compute-1.amazonaws.com',
     'port':'5432',
