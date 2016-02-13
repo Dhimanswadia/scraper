@@ -5,6 +5,7 @@
 #
 #     http://doc.scrapy.org/topics/settings.html
 #
+import dj_database_url
 
 BOT_NAME = 'livingsocial'
 
@@ -13,10 +14,11 @@ SPIDER_MODULES = ['scraper_app.spiders']
 ITEM_PIPELINES = ['scraper_app.pipelines.LivingSocialPipeline']
 
 DATABASE = {
+    'default': dj_database_url.config()
     'drivername': 'postgres',
-    'host': 'localhost',
+    'host': 'ec2-54-225-223-40.compute-1.amazonaws.com',
     'port': '5432',
-    'username': 'dswadia',  # fill in your username here
-    'password': 'qwerty16',  # fill in your password here
-    'database': 'scrape'
+    'username': 'juagqzmyvhljvz',  # fill in your username here
+    'password': 'H0GhC2nid4TcwYp1B76HMuQpFk',  # fill in your password here
+    'database': 'd14s66eejpvrag'
 }
