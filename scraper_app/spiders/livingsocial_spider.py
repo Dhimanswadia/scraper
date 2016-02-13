@@ -36,10 +36,7 @@ class LivingSocialSpider(CrawlSpider):
     }
         def __init__(self):
         dispatcher.connect(self.spider_closed, signals.spider_closed)
-
         def spider_closed(self, spider):
-
-
         def parse(self, response):
         
         """
