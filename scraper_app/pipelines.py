@@ -23,6 +23,7 @@ class LivingSocialPipeline(object):
 
         """
         engine = db_connect()
+        engine = instance
         create_deals_table(engine)
         self.Session = sessionmaker(bind=engine)
 
