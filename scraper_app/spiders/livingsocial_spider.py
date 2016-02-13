@@ -17,7 +17,7 @@ from scrapy.contrib.loader.processor import Join, MapCompose
 from scraper_app.items import LivingSocialDeal
 
 
-class LivingSocialSpider(BaseSpider):
+class LivingSocialSpider(CrawlSpider):
     """
     Spider for regularly updated livingsocial.com site, San Francisco page
     """
