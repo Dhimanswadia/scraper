@@ -16,7 +16,7 @@ DATABASES = {'default': dj_database_url.config()}
 DATABASES['default'] = dj_database_url.config('postgres://user:pass@localhost/dbname')
 
 DATABASE = {
-    'default':{
+    
 
 
     'drivername': 'postgres',
