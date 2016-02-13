@@ -1,1 +1,1 @@
-web: python livingsocial_spider.py
+web: python settings.py
