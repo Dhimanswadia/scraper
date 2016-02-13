@@ -9,7 +9,7 @@ save to a database (postgres).
 Scrapy spider part - it actually performs scraping.
 """
 
-from scrapy.spider import BaseSpider
+from scrapy.spider import CrawlSpider
 from scrapy.selector import HtmlXPathSelector
 from scrapy.contrib.loader import XPathItemLoader
 from scrapy.contrib.loader.processor import Join, MapCompose
