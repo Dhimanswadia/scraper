@@ -34,10 +34,14 @@ class LivingSocialSpider(CrawlSpider):
         'price': './/a/div[@class="deal-prices"]/div[@class="deal-price"]/text()',
         'end_date': './/span[@itemscope]/meta[@itemprop="availabilityEnds"]/@content'
     }
+    def __init__(self):
+        dispatcher.connect(self.spider_closed, signals.spider_closed)
+
+    def spider_closed(self, spider):
+        
 
     def parse(self, response):
-        response = HtmlResponse(url=response.url, status=response.status, headers=response.headers, body=response.body)
-        return super(LivingSocialSpider,self).parse(response)
+        
         """
         Default callback used by Scrapy to process downloaded responses
 
