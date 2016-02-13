@@ -36,6 +36,8 @@ class LivingSocialSpider(CrawlSpider):
     }
 
     def parse(self, response):
+        response = HtmlResponse(url=response.url, status=response.status, headers=response.headers, body=response.body)
+        return super(LivingSocialSpider,self).parse(response)
         """
         Default callback used by Scrapy to process downloaded responses
 
