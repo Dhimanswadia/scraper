@@ -12,14 +12,17 @@ BOT_NAME = 'livingsocial'
 SPIDER_MODULES = ['scraper_app.spiders']
 
 ITEM_PIPELINES = ['scraper_app.pipelines.LivingSocialPipeline']
-#DATABASES['default'] = dj_database_url.config()
+DATABASES['default'] = dj_database_url.config(default='postgres://user:pass@localhost/dbname')
 
 DATABASE = {
-    'default': dj_database_url.config(default='postgres://user:pass@localhost/dbname'),
+    'default':{
+
+
     'drivername': 'postgres',
   	'host':'ec2-54-225-223-40.compute-1.amazonaws.com',
     'port':'5432',
     'username':'juagqzmyvhljvz',  # fill in your username here
     'password':'H0GhC2nid4TcwYp1B76HMuQpFk',  # fill in your password here
     'database':'d14s66eejpvrag'
+}
 }
